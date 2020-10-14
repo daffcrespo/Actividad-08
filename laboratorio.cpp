@@ -17,14 +17,15 @@ void Laboratorio::agregarComputadora(const Computadora &c){
 
 void Laboratorio::mostrar(){
     int i;
+    cout << left;
+    cout << setw(17) << "Nombre equipo";
+    cout << setw(20) << "Sistema Operativo";
+    cout << setw(15) << "Memoria Ram";
+    cout << setw(8) << "Capacidad";
+    cout << endl << "------------------------------------------------------------" << endl;
     for (i=0; i<contador;i++){
         Computadora &c = arreglo[i];
-        cout << "Nombre del equipo: " << c.getNombre()<<endl;
-        cout << "Sistema Operativo: " << c.getSistema()<<endl;
-        cout << "Memoria Ram: " << c.getMemoria()<<endl;
-        cout << "Capacidad: " << c.getCapacidad()<<endl<<endl;
-        
-
+        cout << c;
     }
     cout <<endl<< "Presione entrar para continuar..."<<endl;
     cin.get();

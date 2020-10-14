@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
@@ -25,6 +26,34 @@ public:
     string getSistema();
     int getMemoria();
     int getCapacidad();
+
+    friend ostream& operator<<(ostream &out, const Computadora &c)
+    {
+        out << left;
+        out << setw(17) << c.nombreEquipo;
+        out << setw(20) << c.sistemaOperativo;
+        out << setw(15) << c.memoriaRam;
+        out << setw(8) << c.capacidad;
+        out << endl;
+
+        return out;
+    }
+
+    friend istream& operator>>(istream &in, Computadora &c)
+    {
+        cout << "Nombre Equipo: ";
+        getline(cin, c.nombreEquipo);
+        cout << "Sistema Operativo: ";
+        getline(cin, c.sistemaOperativo);
+        cout << "Memorio RAM: ";
+        cin >> c.memoriaRam;
+        cout << "Capacidad: ";
+        cin >> c.capacidad;
+
+        return in;
+
+    }
+
 
 };
 
