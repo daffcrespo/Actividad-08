@@ -1,0 +1,20 @@
+Dafne Crespo
+Windows
+8
+256
+Jaqueline Romo
+Linux
+12
+128
+Sam Glez
+Windows
+12
+256
+Esperancita
+iOS
+12
+256
+lupita
+linux
+12
+32
